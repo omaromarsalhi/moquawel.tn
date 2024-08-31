@@ -1,0 +1,16 @@
+server:
+  port: 8087
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url : jdbc:postgresql://localhost:5432/esprit_db
+    username: omar
+    password: omar
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
