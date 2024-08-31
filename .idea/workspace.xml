@@ -4,7 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="" />
+    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="start working on the authentication system">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/AuthentificationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/AuthentificationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/auth/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/auth/AuthenticationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/auth/AuthenticationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/auth/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/auth/AuthenticationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/auth/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/auth/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/auth/RefreshResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/auth/RefreshResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/auth/RefreshTokenRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/auth/RefreshTokenRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/auth/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/auth/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/checktoken/CheckToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/checktoken/CheckToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/exception/TokenExpiredException.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/exception/TokenExpiredException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/jwt/JwtAuthentificationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/jwt/JwtAuthentificationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/jwt/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/jwt/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/token/TokenBlackList.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/token/TokenBlackList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/token/TokenBlackListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/token/TokenBlackListRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/user/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/user/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/user/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/user/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/java/com/stage/authentification/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/stage/authentification/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/resources/db/migration/V1__init_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/resources/db/migration/V1__init_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/resources/db/migration/V2__init_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/resources/db/migration/V2__init_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/resources/db/migration/V3__init_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/resources/db/migration/V3__init_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/resources/db/migration/V4__init_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/resources/db/migration/V4__init_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/resources/db/migration/V5__init_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/resources/db/migration/V5__init_data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/main/resources/db/migration/V6__insert_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/resources/db/migration/V6__insert_data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/test/java/com/stage/authentification/AuthentificationApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/test/java/com/stage/authentification/AuthentificationApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentification/src/test/java/com/stage/authentification/auth/AuthenticationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/test/java/com/stage/authentification/auth/AuthenticationControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/authentification.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/authentication.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/calcul-Module.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/calcul-UE.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/discovery-server.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/discovery-server.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/insertMarks.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/pv.yml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +65,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "omaromarsalhi"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/omaromarsalhi/moquawel.tn.git",
+    "accountId": "8ecb770e-7a61-4273-9cf1-4f9e16b89cae"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
 }]]></component>
@@ -23,17 +87,62 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Database Script.console_1.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/salhi/Bureau/moquawel.tn",
+    "last_opened_file_path": "C:/Users/salhi/Bureau/moquawel.tn/moquawel/config-server/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora",
+      "mongo"
+    ],
+    "RunConfigurationTargetLRU": [
+      "7f9af793-fc8e-4756-904c-167063f6e1b1",
+      "7f9af793-fc8e-4756-904c-167063f6e1b1/schema/\"users\""
+    ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Database Script.console_1.js">
+    <configuration name="console_1.js" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/7f9af793-fc8e-4756-904c-167063f6e1b1/console_1.js" />
+      <script-mode>FILE</script-mode>
+      <data-source id="7f9af793-fc8e-4756-904c-167063f6e1b1" namespace="schema/&quot;users&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AuthentificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authentication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.stage.authentification.AuthentificationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.stage.config_server.config_server.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="discovery" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.stage.discovery.discovery.DiscoveryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.stage.gateway.GatewayApplication" />
@@ -41,6 +150,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.console_1.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -58,11 +172,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725138650569</updated>
-      <workItem from="1725138651690" duration="285000" />
+      <workItem from="1725138651690" duration="3500000" />
     </task>
+    <task id="LOCAL-00001" summary="start working on the authentication system">
+      <option name="closed" value="true" />
+      <created>1725139244721</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725139244721</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="start working on the authentication system" />
+    <option name="LAST_COMMIT_MESSAGE" value="start working on the authentication system" />
   </component>
 </project>

@@ -6,6 +6,11 @@
       <list>
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/authentification/pom.xml" />
+        <option value="$PROJECT_DIR$/moquawel/authentification/pom.xml" />
+        <option value="$PROJECT_DIR$/moquawel/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/moquawel/discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/moquawel/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/moquawel/authentication/pom.xml" />
       </list>
     </option>
   </component>
