@@ -1,6 +1,7 @@
 package com.moquawel.authentication.handler;
 
 import com.moquawel.authentication.exception.TokenExpiredException;
+import com.moquawel.authentication.exception.UserNameAlreadyExists;
 import com.moquawel.authentication.exception.UserNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +30,15 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
+                .body(errors);
+    }
+
+    @ExceptionHandler(UserNameAlreadyExists.class)
+    public ResponseEntity<?> handleException(UserNameAlreadyExists exp) {
+        Map<String, String> errors = new HashMap<>();
+        errors.put("user", exp.getMessage());
+        return ResponseEntity
+                .status(HttpStatus.IM_USED)
                 .body(errors);
     }
 

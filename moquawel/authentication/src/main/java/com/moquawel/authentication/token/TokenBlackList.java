@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @AllArgsConstructor
@@ -22,10 +23,10 @@ public class TokenBlackList {
 
     private String jti;
 
-    private Date created_at;
+    private LocalDateTime created_at;
 
-    private Date expires_at;
+    private LocalDateTime expires_at;
 
-//    private User user;
+    private String userId;
 
 }

@@ -1,5 +1,6 @@
 package com.moquawel.authentication.token;
 
+import lombok.AllArgsConstructor;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -9,14 +10,16 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 
 @Service
+@AllArgsConstructor
 public class TokenBlackListService {
 
     private  MongoTemplate mongoTemplate;
 
-    public void expireAllTokensByUser(String userId) {
+    public void removeUserTokens(String userId) {
         Query query = new Query(Criteria.where("userId").is(userId));
-        Update update = new Update().set("expires_at", new Date());
-        mongoTemplate.updateMulti(query, update, TokenBlackList.class);
+        mongoTemplate.remove(query, TokenBlackList.class);
+//        Update update = new Update().set("expires_at", new Date());
+//        mongoTemplate.updateMulti(query, update, TokenBlackList.class);
     }
 
     public void expireTokenByUser(String userId, String jti) {

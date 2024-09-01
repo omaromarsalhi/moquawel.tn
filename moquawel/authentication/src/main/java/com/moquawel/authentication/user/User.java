@@ -1,7 +1,7 @@
 package com.moquawel.authentication.user;
 
 
-import com.moquawel.authentication.role.ERole;
+import com.moquawel.authentication.role.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,16 +12,17 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
+import java.util.stream.Collectors;
 
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
-@Document
+@Document(collection = "user")
 public class User implements UserDetails {
 
     @Id
@@ -37,12 +38,14 @@ public class User implements UserDetails {
 
     private Date created_at;
 
-    private ERole role;
+    private ArrayList<Role> roles;
 
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.name()));
+        return roles.stream()
+                .map(role -> new SimpleGrantedAuthority(role.name()))
+                .collect(Collectors.toList());
     }
 
     @Override
