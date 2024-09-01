@@ -1,35 +1,14 @@
 server:
   port: 8888
 spring:
-  #  main:
-  #    web-application-type: reactive
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
       routes:
-        - id: authentification
-          uri: lb:http://AUTHENTIFICATION
+        - id: authentication
+          uri: lb:http://AUTHENTICATION
           predicates:
-            - Path=/api/auth/**
-        - id: authentification
-          uri: lb:http://AUTHENTIFICATION
-          predicates:
-            - Path=/api/users/**
-        - id: pv
-          uri: lb:http://PV
-          predicates:
-            - Path=/api/pv/**
-        - id: calcul-Module
-          uri: lb:http://CALCUL-MODULE
-          predicates:
-            - Path=/api/module/**
-        - id: calcul-UE
-          uri: lb:http://CALCUL-UE
-          predicates:
-            - Path=/api/ue/**
-        - id: insertMarks
-          uri: lb:http://INSERTMARKS
-          predicates:
-            - Path=/api/marks/**
+            - Path=/api/v1/auth/**
+
