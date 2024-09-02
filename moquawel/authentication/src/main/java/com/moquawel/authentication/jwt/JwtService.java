@@ -86,8 +86,8 @@ public class JwtService {
         return extractClaim(token, Claims::getExpiration).before(new Date());
     }
 
-    public boolean isTokenValid(String token, UserDetails userDetails) {
+    public boolean isTokenValid(String token, UserDetails userDetails,String userId) {
         final String username = extractUsername(token);
-        return tokenBlackListService.existsNonExpiredTokens(extractClaim(token, Claims::getId)) && username.equals(userDetails.getUsername()) && !isTokenExpired(token);
+        return tokenBlackListService.existsNonExpiredTokens(extractClaim(token, Claims::getId),userId) && username.equals(userDetails.getUsername()) && !isTokenExpired(token);
     }
 }

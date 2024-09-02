@@ -18,22 +18,21 @@ public class TokenBlackListService {
     public void removeUserTokens(String userId) {
         Query query = new Query(Criteria.where("userId").is(userId));
         mongoTemplate.remove(query, TokenBlackList.class);
-//        Update update = new Update().set("expires_at", new Date());
-//        mongoTemplate.updateMulti(query, update, TokenBlackList.class);
     }
 
-    public void expireTokenByUser(String userId, String jti) {
+    public void removeExpiredTokenByUser(String userId, String jti) {
         Query query = new Query(
                 Criteria.where("userId").is(userId)
                         .and("jti").ne(jti)
         );
-        Update update = new Update().set("expires_at", new Date());
-        mongoTemplate.updateMulti(query, update, TokenBlackList.class);
+        mongoTemplate.remove(query, TokenBlackList.class);
     }
 
-    public boolean existsNonExpiredTokens(String jti) {
-        Query query = new Query(Criteria.where("jti").is(jti)
-                .and("expires_at").is(null)); // Matches documents where expiresAt is null
+    public boolean existsNonExpiredTokens(String jti,String userId) {
+        Query query = new Query(
+                Criteria.where("userId").is(userId)
+                        .and("jti").ne(jti)
+        );
         long count = mongoTemplate.count(query, TokenBlackList.class);
         return count > 0;
     }

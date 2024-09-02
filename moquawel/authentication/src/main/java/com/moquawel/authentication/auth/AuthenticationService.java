@@ -89,22 +89,18 @@ public class AuthenticationService {
     }
 
     public RefreshResponse refresh(RefreshTokenRequest request) {
-        var user = userRepository.findByEmail(request.username()).orElseThrow(() -> new UserNotFoundException("User not found"));
-        tokenBlackListService.expireTokenByUser(user.getUserId(), jwtService.extractClaim(request.refreshToken(), Claims::getId));
+        var user = userRepository
+                .findByEmail(request.username())
+                .orElseThrow(() -> new UserNotFoundException("User not found"));
+        tokenBlackListService.removeExpiredTokenByUser(
+                user.getUserId(),
+                jwtService.extractClaim(request.refreshToken(), Claims::getId)
+        );
         return generateMainToken(user, request.refreshToken());
     }
 
     private ArrayList<String> generateTokens(User user) {
-        var list = new ArrayList<String>();
         var jwtToken = jwtService.generateToken(user);
-        var tokenBlackList = TokenBlackList.builder()
-                .jti(jwtService.extractClaim(jwtToken, Claims::getId))
-                .userId(user.getUserId())
-                .created_at(LocalDateTime.now())
-                .expires_at(null)
-                .build();
-
-        tokenBlackListRepository.save(tokenBlackList);
 
         var jwtRefreshToken = jwtService.generateRefreshToken(user.getEmail());
         var refreshTokenBlackList = TokenBlackList.builder()
@@ -115,20 +111,12 @@ public class AuthenticationService {
                 .build();
         tokenBlackListRepository.save(refreshTokenBlackList);
 
-        list.add(jwtToken);
-        list.add(jwtRefreshToken);
-        return list;
+        return new ArrayList<>(List.of(jwtToken, jwtRefreshToken));
     }
 
     private RefreshResponse generateMainToken(User user, String refreshToken) {
-        if (jwtService.isTokenValid(refreshToken, user)) {
+        if (jwtService.isTokenValid(refreshToken, user,user.getUserId())) {
             var jwtToken = jwtService.generateToken(user);
-            var tokenBlackList = TokenBlackList.builder()
-                    .jti(jwtService.extractClaim(jwtToken, Claims::getId))
-                    .userId(user.getUserId())
-                    .build();
-            tokenBlackListRepository.save(tokenBlackList);
-
             return new RefreshResponse(jwtToken, refreshToken);
         } else
             throw new TokenExpiredException("JWT Token has expired");

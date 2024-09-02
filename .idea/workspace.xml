@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="working on the registration process">
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/exception/UserNameAlreadyExists.java" afterDir="false" />
+    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="finished the login and registration of the user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/AuthenticationResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/role/ERole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/role/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/role/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/role/RoleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackList.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/jwt/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/jwt/JwtService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,8 +156,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.AuthenticationApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.DiscoveryApplication" />
         <item itemvalue="Spring Boot.ConfigServerApplication" />
       </list>
@@ -190,7 +181,7 @@
       <updated>1725138650569</updated>
       <workItem from="1725138651690" duration="3870000" />
       <workItem from="1725187191690" duration="14348000" />
-      <workItem from="1725222769933" duration="970000" />
+      <workItem from="1725222769933" duration="2839000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -224,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725197745208</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finished the login and registration of the user">
+      <option name="closed" value="true" />
+      <created>1725223903217</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725223903217</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +232,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start working on the authentication system" />
     <MESSAGE value="working on the registration process" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on the registration process" />
+    <MESSAGE value="finished the login and registration of the user" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished the login and registration of the user" />
   </component>
 </project>
