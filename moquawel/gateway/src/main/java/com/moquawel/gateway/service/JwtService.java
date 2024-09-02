@@ -1,9 +1,9 @@
-package com.moquawel.gateway.jwt;
-
+package com.moquawel.gateway.service;
 
 import io.jsonwebtoken.Claims;
-import org.springframework.stereotype.Service;
 import io.jsonwebtoken.Jwts;
+import org.springframework.stereotype.Service;
+
 import java.util.Date;
 
 @Service

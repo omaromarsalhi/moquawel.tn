@@ -46,7 +46,6 @@ public class AuthenticationService {
                 .save(request)
                 .orElseThrow(() -> new UserNameAlreadyExists("Account already exists"));
         var tokes = generateTokens(new CustomUserDetails(user));
-        System.out.println("done");
         return new RefreshResponse(tokes.get(0), tokes.get(1));
 
     }

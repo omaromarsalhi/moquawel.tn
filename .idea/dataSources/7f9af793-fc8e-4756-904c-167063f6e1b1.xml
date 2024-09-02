@@ -10,53 +10,37 @@
     <schema id="3" parent="1" name="local">
       <LastIntrospectionLocalTimestamp>2024-08-31.22:04:17</LastIntrospectionLocalTimestamp>
     </schema>
-    <schema id="4" parent="1" name="users">
-      <LastIntrospectionLocalTimestamp>2024-09-01.20:34:17</LastIntrospectionLocalTimestamp>
+    <schema id="4" parent="1" name="tokens"/>
+    <schema id="5" parent="1" name="users">
+      <LastIntrospectionLocalTimestamp>2024-09-02.14:04:11</LastIntrospectionLocalTimestamp>
     </schema>
-    <table id="5" parent="4" name="tokenBlackList"/>
-    <table id="6" parent="4" name="user"/>
-    <column id="7" parent="5" name="_id">
+    <table id="6" parent="5" name="user"/>
+    <column id="7" parent="6" name="_id">
       <Position>1</Position>
       <StoredType>ObjectId|12s</StoredType>
     </column>
-    <column id="8" parent="5" name="_class">
-      <Position>1</Position>
-      <StoredType>String|12s</StoredType>
-    </column>
-    <column id="9" parent="5" name="jti">
-      <Position>1</Position>
-      <StoredType>String|12s</StoredType>
-    </column>
-    <column id="10" parent="5" name="created_at">
-      <Position>2</Position>
-      <StoredType>ISODate|91s</StoredType>
-    </column>
-    <column id="11" parent="6" name="email">
-      <Position>1</Position>
-      <StoredType>String|12s</StoredType>
-    </column>
-    <column id="12" parent="6" name="_id">
-      <Position>1</Position>
-      <StoredType>ObjectId|12s</StoredType>
-    </column>
-    <column id="13" parent="6" name="lastName">
-      <Position>1</Position>
-      <StoredType>String|12s</StoredType>
-    </column>
-    <column id="14" parent="6" name="_class">
+    <column id="8" parent="6" name="_class">
       <Position>2</Position>
       <StoredType>String|12s</StoredType>
     </column>
-    <column id="15" parent="6" name="firstName">
-      <Position>2</Position>
-      <StoredType>String|12s</StoredType>
-    </column>
-    <column id="16" parent="6" name="password">
-      <Position>2</Position>
-      <StoredType>String|12s</StoredType>
-    </column>
-    <column id="17" parent="6" name="roles">
+    <column id="9" parent="6" name="email">
       <Position>3</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="10" parent="6" name="firstName">
+      <Position>4</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="11" parent="6" name="lastName">
+      <Position>5</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="12" parent="6" name="password">
+      <Position>6</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="13" parent="6" name="roles">
+      <Position>7</Position>
       <StoredType>Array|2003s</StoredType>
     </column>
   </database-model>

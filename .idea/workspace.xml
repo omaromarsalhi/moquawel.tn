@@ -4,102 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/AuthenticationApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/client/UserClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/controller/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/customuser/CustomUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/exception/TokenExpiredException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/exception/UserNameAlreadyExists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/exception/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/jwt/JitAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/jwt/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/request/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/request/RefreshTokenRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/request/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/response/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/response/RefreshResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/role/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/service/TokenBlackListService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/token/TokenBlackList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/token/TokenBlackListRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/test/java/com/moquawel/authentication/AuthenticationControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/test/java/com/moquawel/authentication/AuthentificationApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/users-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/UsersApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/exception/TokenExpiredException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/exception/UserNameAlreadyExists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/exception/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/request/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/response/RefreshResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/role/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/java/com/moquawel/users/user/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/test/java/com/moquawel/authentication/AuthentificationApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/src/test/java/com/moquawel/authentication/auth/AuthenticationControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="separating the authentication service from the user service">
+      <change afterPath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f9af793-fc8e-4756-904c-167063f6e1b1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7f9af793-fc8e-4756-904c-167063f6e1b1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/AuthenticationApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/AuthenticationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/AuthenticationRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/AuthenticationResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/AuthenticationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/RefreshResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/RefreshTokenRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/auth/RegisterRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/checktoken/CheckToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/ApplicationConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/exception/TokenExpiredException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/exception/UserNameAlreadyExists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/exception/UserNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/handler/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/jwt/JitAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/jwt/JwtService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/role/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackListRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackListService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/test/java/com/moquawel/authentication/AuthentificationApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/test/java/com/moquawel/authentication/auth/AuthenticationControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/authentication.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/authentication-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/gateway.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/client/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/jwt/JitAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/jwt/JitAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication-service/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/config/GatewayConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/exeption/TokenMissingException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/jwt/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/jwt/JwtService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +79,7 @@
     "git-widget-placeholder": "new-version-of-auth",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/salhi/Bureau/moquawel.tn/moquawel/authentication-service/src/main/java/com/moquawel/authentication",
+    "last_opened_file_path": "C:/Users/salhi/Bureau/moquawel.tn/moquawel/gateway/src/main/java/com/moquawel/gateway",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -187,6 +105,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\salhi\Bureau\moquawel.tn\moquawel\gateway\src\main\java\com\moquawel\gateway" />
       <recent name="C:\Users\salhi\Bureau\moquawel.tn\moquawel\authentication-service\src\main\java\com\moquawel\authentication" />
       <recent name="C:\Users\salhi\Bureau\moquawel.tn\moquawel\authentication-service\src\main\java\com\moquawel\authentication\custemuser" />
       <recent name="C:\Users\salhi\Bureau\moquawel.tn\moquawel\authentication-service\src\main\java\com\moquawel\authentication\client" />
@@ -298,7 +217,7 @@
       <workItem from="1725187191690" duration="14348000" />
       <workItem from="1725222769933" duration="2839000" />
       <workItem from="1725274298403" duration="1605000" />
-      <workItem from="1725275974894" duration="8268000" />
+      <workItem from="1725275974894" duration="9642000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -340,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725223903217</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="separating the authentication service from the user service">
+      <option name="closed" value="true" />
+      <created>1725286637709</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725286637709</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +278,7 @@
     <MESSAGE value="working on the registration process" />
     <MESSAGE value="finished the login and registration of the user" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="separating the authentication service from the user service" />
+    <option name="LAST_COMMIT_MESSAGE" value="separating the authentication service from the user service" />
   </component>
 </project>

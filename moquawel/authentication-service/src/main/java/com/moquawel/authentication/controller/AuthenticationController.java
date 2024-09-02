@@ -29,7 +29,6 @@ public class AuthenticationController {
     public ResponseEntity<RefreshResponse> register(
             @RequestBody @Valid RegisterRequest request
     ){
-        System.out.println(request);
         return ResponseEntity.ok(authenticationService.register(request));
     }
 
