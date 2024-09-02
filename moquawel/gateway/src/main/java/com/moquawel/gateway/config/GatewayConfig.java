@@ -24,13 +24,13 @@ import java.util.List;
 @AllArgsConstructor
 public class GatewayConfig {
 
-
-    private final JwtAuthenticationFilter jwtAuthenticationFilter;
-
-    @Bean
-    public WebFilter jwtWebFilter() {
-        return jwtAuthenticationFilter;
-    }
+//
+//    private final JwtAuthenticationFilter jwtAuthenticationFilter;
+//
+//    @Bean
+//    public WebFilter jwtWebFilter() {
+//        return jwtAuthenticationFilter;
+//    }
 
 //    @Bean
 //    public CorsWebFilter corsWebFilter() {
