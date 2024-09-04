@@ -34,7 +34,7 @@ public class UserService {
     public UserDto save(RegisterRequest request) {
 
         if (userRepository.existsByEmail(request.email()))
-            throw new UserNameAlreadyExists("account already exists");
+            throw new UserNameAlreadyExists("Account already exists");
 
         var user2save = User.builder()
                 .firstName(request.firstName())

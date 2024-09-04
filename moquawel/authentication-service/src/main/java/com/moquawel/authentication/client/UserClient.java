@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @FeignClient(
         name = "users-service",
-        url = "http://localhost:8888/api/v1/users"
+        url = "/api/v1/users"
 )
 public interface UserClient {
 
@@ -21,6 +21,6 @@ public interface UserClient {
     Optional<UserDto> getUser(@PathVariable("username") String username);
 
     @PostMapping("/save")
-    Optional<UserDto> save(@RequestBody RegisterRequest request);
+    UserDto save(@RequestBody RegisterRequest request);
 
 }

@@ -16,14 +16,17 @@ import com.moquawel.authentication.response.RefreshResponse;
 import com.moquawel.authentication.token.TokenBlackList;
 import com.moquawel.authentication.token.TokenBlackListRepository;
 
+import feign.FeignException;
 import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
 import org.springframework.stereotype.Service;
 
+import java.net.http.HttpClient;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,10 +44,14 @@ public class AuthenticationService {
 
 
     public RefreshResponse register(RegisterRequest request) {
-
-        var user = userClient
-                .save(request)
-                .orElseThrow(() -> new UserNameAlreadyExists("Account already exists"));
+        UserDto user = null;
+        try {
+            user = userClient.save(request);
+        } catch (FeignException e) {
+            if (e.getMessage().equals("Account already exists") &&
+                    e.status() == HttpStatus.INTERNAL_SERVER_ERROR.value())
+                throw new UserNameAlreadyExists("Account already exists");
+        }
         var tokes = generateTokens(new CustomUserDetails(user));
         return new RefreshResponse(tokes.get(0), tokes.get(1));
 

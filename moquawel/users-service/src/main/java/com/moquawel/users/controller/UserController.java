@@ -2,9 +2,11 @@ package com.moquawel.users.controller;
 
 
 import com.moquawel.users.dto.UserDto;
+import com.moquawel.users.exception.UserNameAlreadyExists;
 import com.moquawel.users.request.RegisterRequest;
 import com.moquawel.users.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,10 +27,14 @@ public class UserController {
 
 
     @PostMapping("/save")
-    public ResponseEntity<UserDto> save(
+    public ResponseEntity<?> save(
             @RequestBody RegisterRequest request
     ) {
-        return ResponseEntity.ok(userService.save(request));
+        try {
+            return ResponseEntity.ok(userService.save(request));
+        } catch (UserNameAlreadyExists e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
     }
 
 }
