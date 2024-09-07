@@ -1,4 +1,4 @@
-package com.moquawel.authentication.auth;
+package com.moquawel.authentication.request;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

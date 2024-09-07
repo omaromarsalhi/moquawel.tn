@@ -1,7 +1,6 @@
-package com.moquawel.authentication.jwt;
+package com.moquawel.authentication.service;
 
 
-import com.moquawel.authentication.token.TokenBlackListService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -84,6 +83,11 @@ public class JwtService {
 
     public boolean isTokenExpired(String token) {
         return extractClaim(token, Claims::getExpiration).before(new Date());
+    }
+
+    public boolean isTokenValid(String token, UserDetails userDetails) {
+        final String username = extractUsername(token);
+        return  username.equals(userDetails.getUsername()) && !isTokenExpired(token);
     }
 
     public boolean isTokenValid(String token, UserDetails userDetails,String userId) {

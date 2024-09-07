@@ -1,6 +1,6 @@
-package com.moquawel.authentication.auth;
+package com.moquawel.authentication.response;
 
-import com.moquawel.authentication.role.Role;
+import com.moquawel.authentication.user.Role;
 
 import java.util.ArrayList;
 

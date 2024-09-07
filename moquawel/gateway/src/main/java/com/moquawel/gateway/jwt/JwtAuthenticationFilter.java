@@ -1,12 +1,11 @@
 package com.moquawel.gateway.jwt;
 
-
-import com.moquawel.gateway.exeption.TokenMissingException;
+import com.moquawel.gateway.exception.TokenMissingException;
 import io.jsonwebtoken.ExpiredJwtException;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferFactory;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -23,47 +22,37 @@ import java.util.List;
 
 @Component
 @AllArgsConstructor
+@Slf4j
 public class JwtAuthenticationFilter implements WebFilter {
 
-
-    private JwtService jwtService;
-
+    private final JwtService jwtService;
     private final AntPathMatcher pathMatcher = new AntPathMatcher();
     private final List<String> excludedPaths = List.of("/api/v1/auth/**", "/api/v1/users/**");
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
+        String path = exchange.getRequest().getURI().getPath();
+        log.info("Processing request for path: {}", path);
+
+        if (exchange.getRequest().getMethod() == HttpMethod.OPTIONS) {
+            return handleCorsPreflight(exchange);
+        }
+
+        if (isExcluded(path)) {
+            return chain.filter(exchange);
+        }
+
         try {
-            String path = exchange.getRequest().getURI().getPath();
-            System.out.println(path);
-//            if (exchange.getRequest().getMethod() == HttpMethod.OPTIONS) {
-//                return handleCorsPreflight(exchange);
-//            }
-
-            if (isExcluded(path)) {
-                return chain.filter(exchange);
-            }
-
-
             String token = extractToken(exchange.getRequest().getHeaders().getFirst("Authorization"));
-
-            if (token == null || jwtService.isTokenValid(token)) {
-                throw new TokenMissingException("expired");
+            if (!jwtService.isTokenValid(token)) {
+                throw new ExpiredJwtException(null, null, "JWT Token has expired");
             }
 
             return chain.filter(exchange);
         } catch (TokenMissingException | ExpiredJwtException e) {
-            String errorMessage = "{\"token\": \"JWT Token has expired Donkey\"}";
-            exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-            exchange.getResponse().getHeaders().setContentType(MediaType.APPLICATION_JSON);
-            exchange.getResponse().getHeaders().set("Access-Control-Allow-Origin", "http://localhost:3000");
-            exchange.getResponse().getHeaders().set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-            exchange.getResponse().getHeaders().set("Access-Control-Allow-Headers", "authorization, content-type, xsrf-token");
-            DataBufferFactory bufferFactory = exchange.getResponse().bufferFactory();
-            DataBuffer buffer = bufferFactory.wrap(errorMessage.getBytes(StandardCharsets.UTF_8));
-            return exchange.getResponse().writeWith(Flux.just(buffer));
+            log.error("Authentication error: {}", e.getMessage());
+            return handleUnauthorizedResponse(exchange, "JWT Token is invalid or expired.");
         }
-
     }
 
     private boolean isExcluded(String path) {
@@ -73,17 +62,28 @@ public class JwtAuthenticationFilter implements WebFilter {
     private String extractToken(String bearerToken) {
         if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
             return bearerToken.substring(7);
-        } else
-            throw new TokenMissingException("missing token");
+        } else {
+            throw new TokenMissingException("Authorization token is missing or malformed.");
+        }
     }
 
+    private Mono<Void> handleUnauthorizedResponse(ServerWebExchange exchange, String message) {
+        String errorMessage = String.format("{\"error\": \"%s\"}", message);
+        exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
+        exchange.getResponse().getHeaders().setContentType(MediaType.APPLICATION_JSON);
+        exchange.getResponse().getHeaders().set("Access-Control-Allow-Origin", "http://localhost:3000");
+        exchange.getResponse().getHeaders().set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        exchange.getResponse().getHeaders().set("Access-Control-Allow-Headers", "authorization, content-type, xsrf-token");
+        DataBufferFactory bufferFactory = exchange.getResponse().bufferFactory();
+        DataBuffer buffer = bufferFactory.wrap(errorMessage.getBytes(StandardCharsets.UTF_8));
+        return exchange.getResponse().writeWith(Flux.just(buffer));
+    }
 
-//    private Mono<Void> handleCorsPreflight(ServerWebExchange exchange) {
-//        exchange.getResponse().getHeaders().add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "http://localhost:3000");
-//        exchange.getResponse().getHeaders().add(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS, "GET, POST, PUT, DELETE, OPTIONS");
-//        exchange.getResponse().getHeaders().add(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS, "Authorization, Content-Type, Accept");
-//        exchange.getResponse().getHeaders().add(HttpHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS, "true");
-//        exchange.getResponse().setStatusCode(HttpStatus.OK);
-//        return exchange.getResponse().setComplete();
-//    }
+    private Mono<Void> handleCorsPreflight(ServerWebExchange exchange) {
+        exchange.getResponse().setStatusCode(HttpStatus.OK);
+        exchange.getResponse().getHeaders().set("Access-Control-Allow-Origin", "*");
+        exchange.getResponse().getHeaders().set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        exchange.getResponse().getHeaders().set("Access-Control-Allow-Headers", "authorization, content-type, xsrf-token");
+        return exchange.getResponse().setComplete();
+    }
 }

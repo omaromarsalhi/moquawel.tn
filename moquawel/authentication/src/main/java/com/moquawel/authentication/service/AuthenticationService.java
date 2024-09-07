@@ -1,14 +1,17 @@
-package com.moquawel.authentication.auth;
+package com.moquawel.authentication.service;
 
 
 import com.moquawel.authentication.exception.TokenExpiredException;
 import com.moquawel.authentication.exception.UserNameAlreadyExists;
 import com.moquawel.authentication.exception.UserNotFoundException;
-import com.moquawel.authentication.jwt.JwtService;
+import com.moquawel.authentication.request.AuthenticationRequest;
+import com.moquawel.authentication.request.RefreshTokenRequest;
+import com.moquawel.authentication.request.RegisterRequest;
+import com.moquawel.authentication.response.AuthenticationResponse;
+import com.moquawel.authentication.response.RefreshResponse;
 import com.moquawel.authentication.token.TokenBlackList;
 import com.moquawel.authentication.token.TokenBlackListRepository;
-import com.moquawel.authentication.role.Role;
-import com.moquawel.authentication.token.TokenBlackListService;
+import com.moquawel.authentication.user.Role;
 import com.moquawel.authentication.user.User;
 import com.moquawel.authentication.user.UserRepository;
 
@@ -22,9 +25,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 

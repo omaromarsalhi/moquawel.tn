@@ -1,11 +1,12 @@
-package com.moquawel.authentication.user;
+package com.moquawel.authentication.controller;
 
 
+import com.moquawel.authentication.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
 public class UserController {
 

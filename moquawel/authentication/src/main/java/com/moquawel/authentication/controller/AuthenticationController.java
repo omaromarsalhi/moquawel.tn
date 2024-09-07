@@ -1,7 +1,13 @@
-package com.moquawel.authentication.auth;
+package com.moquawel.authentication.controller;
 
 
 
+import com.moquawel.authentication.service.AuthenticationService;
+import com.moquawel.authentication.request.AuthenticationRequest;
+import com.moquawel.authentication.request.RefreshTokenRequest;
+import com.moquawel.authentication.request.RegisterRequest;
+import com.moquawel.authentication.response.AuthenticationResponse;
+import com.moquawel.authentication.response.RefreshResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -9,8 +15,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
 
 
 @RestController

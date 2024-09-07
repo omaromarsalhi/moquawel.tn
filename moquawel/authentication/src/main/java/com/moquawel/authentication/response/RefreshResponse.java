@@ -1,4 +1,4 @@
-package com.moquawel.authentication.auth;
+package com.moquawel.authentication.response;
 
 public record RefreshResponse(
         String token,

@@ -1,6 +1,7 @@
-package com.moquawel.authentication.user;
+package com.moquawel.authentication.service;
 
 
+import com.moquawel.authentication.user.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

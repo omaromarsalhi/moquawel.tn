@@ -1,7 +1,6 @@
 package com.moquawel.authentication.user;
 
 
-import com.moquawel.authentication.role.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
