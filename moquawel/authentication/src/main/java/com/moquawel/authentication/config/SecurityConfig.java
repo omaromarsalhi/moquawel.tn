@@ -24,7 +24,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 public class SecurityConfig {
 
-    private static final String[] WHITE_LIST_URL = {"/api/v1/auth/login","/api/v1/auth/register"};
+    private static final String[] WHITE_LIST_URL = {"/api/v1/auth/login","/api/v1/auth/register","/api/v1/auth/refresh"};
     private final JitAuthenticationFilter jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
 //    private final LogoutHandler logoutHandler;

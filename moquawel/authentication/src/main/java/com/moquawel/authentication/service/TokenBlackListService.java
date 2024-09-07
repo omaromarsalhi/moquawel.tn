@@ -29,7 +29,7 @@ public class TokenBlackListService {
     public boolean existsNonExpiredTokens(String jti,String userId) {
         Query query = new Query(
                 Criteria.where("userId").is(userId)
-                        .and("jti").ne(jti)
+                        .and("jti").is(jti)
         );
         long count = mongoTemplate.count(query, TokenBlackList.class);
         return count > 0;
