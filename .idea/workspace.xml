@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="working on the auth">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/LogoutService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/controller/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/authentication.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/authentication.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/TokenBlackListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/TokenBlackListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackListRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +214,7 @@
       <workItem from="1725274298403" duration="1605000" />
       <workItem from="1725275974894" duration="10422000" />
       <workItem from="1725461365646" duration="9299000" />
-      <workItem from="1725707317429" duration="7041000" />
+      <workItem from="1725707317429" duration="8744000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -287,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725716085872</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="working on the auth">
+      <option name="closed" value="true" />
+      <created>1725717083928</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725717083928</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

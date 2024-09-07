@@ -97,7 +97,6 @@ public class AuthenticationService {
                 user.getUserId(),
                 jwtService.extractClaim(request.refreshToken(), Claims::getId)
         );
-        System.out.println("omar");
         return generateMainToken(user, request.refreshToken());
     }
 

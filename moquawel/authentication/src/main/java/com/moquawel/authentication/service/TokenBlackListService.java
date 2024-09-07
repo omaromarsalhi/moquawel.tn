@@ -18,6 +18,11 @@ public class TokenBlackListService {
         mongoTemplate.remove(query, TokenBlackList.class);
     }
 
+    public void removeUserTokensBtJti(String userId) {
+        Query query = new Query(Criteria.where("userId").is(userId));
+        mongoTemplate.remove(query, TokenBlackList.class);
+    }
+
     public void removeExpiredTokenByUser(String userId, String jti) {
         Query query = new Query(
                 Criteria.where("userId").is(userId)
