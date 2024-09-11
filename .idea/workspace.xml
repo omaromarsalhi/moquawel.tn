@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="start working on the subscription">
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/utils/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/utils/JwtTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/gateway.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/subscription.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/subscription.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/subscription/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/subscription/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/controller/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/controller/SubscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/JwtService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,10 +202,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.AuthenticationApplication" />
-        <item itemvalue="Spring Boot.SubscriptionApplication" />
         <item itemvalue="Spring Boot.ConfigServerApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.SubscriptionApplication" />
         <item itemvalue="Spring Boot.DiscoveryApplication" />
       </list>
     </recent_temporary>
@@ -244,7 +234,7 @@
       <workItem from="1725461365646" duration="9299000" />
       <workItem from="1725707317429" duration="9097000" />
       <workItem from="1726058370020" duration="978000" />
-      <workItem from="1726059362472" duration="7708000" />
+      <workItem from="1726059362472" duration="8049000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -350,7 +340,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726059315272</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="start working on the subscription">
+      <option name="closed" value="true" />
+      <created>1726071096050</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726071096050</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
