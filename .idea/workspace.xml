@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="working on the auth">
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/LogoutService.java" afterDir="false" />
+    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="the version 1 of the authentication service is ready">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f9af793-fc8e-4756-904c-167063f6e1b1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/TokenBlackListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/TokenBlackListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/token/TokenBlackListRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/LogoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/LogoutService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +20,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -42,6 +39,13 @@
     &quot;accountId&quot;: &quot;8ecb770e-7a61-4273-9cf1-4f9e16b89cae&quot;
   }
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -74,7 +78,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/salhi/Bureau/moquawel.tn/moquawel/gateway/src/main/java/com/moquawel/gateway",
+    "last_opened_file_path": "C:/Users/salhi/Bureau/moquawel.tn/moquawel/subscription/pom.xml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -214,7 +218,8 @@
       <workItem from="1725274298403" duration="1605000" />
       <workItem from="1725275974894" duration="10422000" />
       <workItem from="1725461365646" duration="9299000" />
-      <workItem from="1725707317429" duration="8744000" />
+      <workItem from="1725707317429" duration="9097000" />
+      <workItem from="1726058370020" duration="582000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -296,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725717083928</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="the version 1 of the authentication service is ready">
+      <option name="closed" value="true" />
+      <created>1725718727003</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725718727003</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +322,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="separating the authentication service from the user service" />
     <MESSAGE value="working on the auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on the auth" />
+    <MESSAGE value="the version 1 of the authentication service is ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="the version 1 of the authentication service is ready" />
   </component>
 </project>

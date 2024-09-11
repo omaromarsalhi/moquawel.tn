@@ -11,6 +11,9 @@
         <option value="$PROJECT_DIR$/moquawel/discovery/pom.xml" />
         <option value="$PROJECT_DIR$/moquawel/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/moquawel/authentication/pom.xml" />
+        <option value="$PROJECT_DIR$/moquawel/users-service/pom.xml" />
+        <option value="$PROJECT_DIR$/moquawel/authentication-service/pom.xml" />
+        <option value="$PROJECT_DIR$/moquawel/subscription/pom.xml" />
       </list>
     </option>
   </component>

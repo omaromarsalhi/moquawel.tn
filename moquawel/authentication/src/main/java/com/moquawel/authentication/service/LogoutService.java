@@ -1,13 +1,11 @@
 package com.moquawel.authentication.service;
 
-import com.moquawel.authentication.exception.TokenMissingException;
-import com.moquawel.authentication.token.TokenBlackListRepository;
+
 import com.moquawel.authentication.user.UserRepository;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.LogoutHandler;
