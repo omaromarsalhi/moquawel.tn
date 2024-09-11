@@ -26,6 +26,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -101,7 +102,7 @@ public class AuthenticationService {
     }
 
     private ArrayList<String> generateTokens(User user) {
-        var jwtToken = jwtService.generateToken(user);
+        var jwtToken = jwtService.generateToken(getHashMap(user.getRoles()), user);
 
         var jwtRefreshToken = jwtService.generateRefreshToken(user.getEmail());
         var refreshTokenBlackList = TokenBlackList.builder()
@@ -116,11 +117,17 @@ public class AuthenticationService {
     }
 
     private RefreshResponse generateMainToken(User user, String refreshToken) {
-        if (jwtService.isTokenValid(refreshToken, user,user.getUserId())) {
-            var jwtToken = jwtService.generateToken(user);
+        if (jwtService.isTokenValid(refreshToken, user, user.getUserId())) {
+            var jwtToken = jwtService.generateToken(getHashMap(user.getRoles()),user);
             return new RefreshResponse(jwtToken, refreshToken);
         } else
             throw new TokenExpiredException("JWT Token has expired");
+    }
+
+    private HashMap<String, Object> getHashMap(ArrayList<Role> roles) {
+        HashMap<String, Object> claimsMap = new HashMap<>();
+        claimsMap.put("roles", roles);
+        return claimsMap;
     }
 
 }

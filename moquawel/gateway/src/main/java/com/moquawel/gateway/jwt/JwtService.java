@@ -2,6 +2,7 @@ package com.moquawel.gateway.jwt;
 
 
 import io.jsonwebtoken.Claims;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import io.jsonwebtoken.Jwts;
 import java.util.Date;
@@ -9,11 +10,12 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    private final String SECRET_KEY = "3A3819FB8D35506C579DB26CC2B33952550D02BE99FBF626D8F9C4E8E934F1A3";
+    @Value("${application.security.jwt.secret-key}")
+    private String secretKey;
 
     public Claims extractAllClaims(String token) {
         return Jwts.parser()
-                .setSigningKey(SECRET_KEY)
+                .setSigningKey(secretKey)
                 .build()
                 .parseClaimsJws(token)
                 .getBody();

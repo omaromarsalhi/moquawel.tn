@@ -5,80 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="start working on the subscription">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5a614cbb-f494-4015-88fc-edccc2b5b785.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/AuthenticationApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/client/UserClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/config/ApplicationConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/config/SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/controller/AuthenticationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/customuser/CustomUserDetails.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/dto/UserDto$UserDtoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/dto/UserDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/exception/TokenExpiredException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/exception/UserNameAlreadyExists.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/exception/UserNotFoundException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/handler/GlobalExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/jwt/JwtAuthenticationFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/jwt/JwtService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/request/AuthenticationRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/request/RefreshTokenRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/request/RegisterRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/response/AuthenticationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/response/RefreshResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/role/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/service/AuthenticationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/service/TokenBlackListService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/token/TokenBlackList$TokenBlackListBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/token/TokenBlackList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication-service/target/classes/com/moquawel/authentication/token/TokenBlackListRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/subscription.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/SubscriptionApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/controller/SubscriptionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/subscription/src/test/java/com/moquawel/subscription/SubscriptionApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/AuthenticationApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/auth/AuthenticationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/auth/AuthenticationRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/auth/AuthenticationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/auth/AuthenticationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/auth/RefreshResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/auth/RefreshTokenRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/auth/RegisterRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/checktoken/CheckToken.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/config/ApplicationConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/exception/TokenExpiredException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/exception/UserNameAlreadyExists.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/exception/UserNotFoundException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/handler/GlobalExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/jwt/JwtService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/role/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/token/TokenBlackList$TokenBlackListBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/token/TokenBlackList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/token/TokenBlackListRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/token/TokenBlackListService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/user/User$UserBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/user/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/user/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/user/UserDto$UserDtoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/user/UserDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/user/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/classes/com/moquawel/authentication/user/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/test-classes/com/authentication/AuthentificationApplicationTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/users-service/target/test-classes/com/authentication/auth/AuthenticationControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f9af793-fc8e-4756-904c-167063f6e1b1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f9af793-fc8e-4756-904c-167063f6e1b1/storage_v2/_src_/schema/test.kkQ2AA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/utils/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/utils/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/LogoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/LogoutService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/gateway.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/subscription.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/subscription.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/subscription/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/subscription/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/controller/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/subscription/src/main/java/com/moquawel/subscription/controller/SubscriptionController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +82,7 @@
     "Spring Boot.ConfigServerApplication.executor": "Run",
     "Spring Boot.DiscoveryApplication.executor": "Run",
     "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.SubscriptionApplication.executor": "Run",
     "Spring Boot.UsersApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -192,7 +130,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthenticationApplication">
+  <component name="RunManager" selected="Spring Boot.SubscriptionApplication">
     <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="authentication" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.moquawel.authentication.AuthenticationApplication" />
@@ -252,7 +190,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SubscriptionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="subscription" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.moquawel.subscription.SubscriptionApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.moquawel.subscription.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Spring Boot.SubscriptionApplication" />
       <item itemvalue="Spring Boot.AuthenticationApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.DiscoveryApplication" />
@@ -260,8 +212,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AuthenticationApplication" />
         <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.AuthenticationApplication" />
+        <item itemvalue="Spring Boot.SubscriptionApplication" />
         <item itemvalue="Spring Boot.ConfigServerApplication" />
         <item itemvalue="Spring Boot.DiscoveryApplication" />
       </list>
@@ -290,7 +243,8 @@
       <workItem from="1725275974894" duration="10422000" />
       <workItem from="1725461365646" duration="9299000" />
       <workItem from="1725707317429" duration="9097000" />
-      <workItem from="1726058370020" duration="894000" />
+      <workItem from="1726058370020" duration="978000" />
+      <workItem from="1726059362472" duration="7708000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -388,7 +342,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726059263760</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="start working on the subscription">
+      <option name="closed" value="true" />
+      <created>1726059315272</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726059315272</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
