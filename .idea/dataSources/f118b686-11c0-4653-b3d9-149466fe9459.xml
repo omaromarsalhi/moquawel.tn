@@ -7,7 +7,7 @@
     <schema id="2" parent="1" name="admin"/>
     <schema id="3" parent="1" name="local"/>
     <schema id="4" parent="1" name="users">
-      <LastIntrospectionLocalTimestamp>2024-09-11.13:16:33</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-09-12.19:37:30</LastIntrospectionLocalTimestamp>
     </schema>
     <table id="5" parent="4" name="tokenBlackList"/>
     <table id="6" parent="4" name="user"/>

@@ -14,7 +14,7 @@ spring:
         - id: subscription
           uri: lb:http://SUBSCRIPTION
           predicates:
-            - Path=/api/v1/subscription/**
+            - Path=/api/v1/subscriptions/**
 
 application:
   security:

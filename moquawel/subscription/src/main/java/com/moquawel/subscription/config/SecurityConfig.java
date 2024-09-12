@@ -32,7 +32,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(req ->
                         req.requestMatchers(WHITE_LIST_URL)
                                 .permitAll()
-                                .requestMatchers("/api/v1/subscription/admin").hasAuthority("EDITOR")
+                                .requestMatchers("/api/v1/subscriptions/activate").hasAuthority("EDITOR")
+                                .requestMatchers("/api/v1/subscriptions/deactivate").hasAuthority("EDITOR")
+                                .requestMatchers("/api/v1/subscriptions/renew").hasAuthority("EDITOR")
                                 .anyRequest()
                                 .authenticated()
                 )
