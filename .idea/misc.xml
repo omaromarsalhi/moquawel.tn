@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/moquawel/users-service/pom.xml" />
         <option value="$PROJECT_DIR$/moquawel/authentication-service/pom.xml" />
         <option value="$PROJECT_DIR$/moquawel/subscription/pom.xml" />
+        <option value="$PROJECT_DIR$/moquawel/tenderInvitation/pom.xml" />
       </list>
     </option>
   </component>
