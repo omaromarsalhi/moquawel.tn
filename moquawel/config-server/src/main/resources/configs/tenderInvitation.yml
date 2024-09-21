@@ -12,3 +12,5 @@ application:
   security:
     jwt:
       secret-key: 3A3819FB8D35506C579DB26CC2B33952550D02BE99FBF626D8F9C4E8E934F1A3
+search-service:
+  url: https://www.tuneps.tn/api/portail/bid/master/data

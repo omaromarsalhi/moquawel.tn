@@ -54,7 +54,6 @@ public class AuthenticationService {
                 .password(passwordEncoder.encode(request.password()))
                 .roles(new ArrayList<>(List.of(Role.SUBSCRIBER, Role.EDITOR)))
                 .build();
-
         userRepository.save(user2save);
         var tokes = generateTokens(user2save);
         return new RefreshResponse(tokes.get(0), tokes.get(1));
