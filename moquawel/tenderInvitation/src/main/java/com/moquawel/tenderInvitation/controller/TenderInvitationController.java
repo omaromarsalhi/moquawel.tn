@@ -1,7 +1,7 @@
 package com.moquawel.tenderInvitation.controller;
 
 
-import com.moquawel.tenderInvitation.response.OfferResponse;
+import com.moquawel.tenderInvitation.response.PayloadResponse;
 import com.moquawel.tenderInvitation.service.TenderInvitationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,10 +19,10 @@ public class TenderInvitationController {
         return ResponseEntity.ok("hello");
     }
 
-//    @GetMapping("/getOffers")
-//    public ResponseEntity<OfferResponse> getOffers(){
-//        return ResponseEntity.ok(tenderInvitationService.getOffers());
-//    }
+    @GetMapping("/getOffers")
+    public ResponseEntity<PayloadResponse> getOffers(){
+        return ResponseEntity.ok(tenderInvitationService.getOffers());
+    }
 
 
 
