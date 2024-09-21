@@ -24,7 +24,50 @@ public class TenderInvitationService {
     private final RetrieveClient retrieveClient;
     private final OfferRepository offerRepository;
 
-    public OfferResponse getOffers() {
+//    public OfferResponse getOffers() {
+//        Map<String, Object> formData = new HashMap<>();
+//        var currentDateTime = this.formatNowDate();
+//        formData.put("publicYn", 'Y');
+//        formData.put("publicDt", currentDateTime);
+//
+//        List<Map<String, String>> searchPayload = generateSearchCriteria(formData);
+//
+//        Map<String, Object> payload = new HashMap<>();
+//        payload.put("dataSearch", searchPayload);
+//
+//        ResponseEntity<OfferResponse> response = retrieveClient.retrieveClient(payload);
+//
+//        if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
+//            if (response.getBody().payload().total() != 0) {
+//
+//                var newOfferList = response.getBody()
+//                        .payload()
+//                        .data()
+//                        .stream()
+//                        .filter(data -> compareDateTime(currentDateTime, data.getPublicDt()))
+//                        .toList();
+//
+//                offerRepository.saveAll(newOfferList);
+//
+//                return OfferResponse
+//                        .builder()
+//                        .code(200)
+//                        .payload(
+//                                PayloadResponse
+//                                        .builder()
+//                                        .total(newOfferList.size())
+//                                        .data(newOfferList)
+//                                        .build()
+//                        )
+//                        .build();
+//            }
+//            return null;
+//        } else
+//            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
+//    }
+
+    public void getOffersFromTuneps() {
+
         Map<String, Object> formData = new HashMap<>();
         var currentDateTime = this.formatNowDate();
         formData.put("publicYn", 'Y');
@@ -39,7 +82,6 @@ public class TenderInvitationService {
 
         if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
             if (response.getBody().payload().total() != 0) {
-
                 var newOfferList = response.getBody()
                         .payload()
                         .data()
@@ -48,24 +90,10 @@ public class TenderInvitationService {
                         .toList();
 
                 offerRepository.saveAll(newOfferList);
-
-                return OfferResponse
-                        .builder()
-                        .code(200)
-                        .payload(
-                                PayloadResponse
-                                        .builder()
-                                        .total(newOfferList.size())
-                                        .data(newOfferList)
-                                        .build()
-                        )
-                        .build();
             }
-            return null;
         } else
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
     }
-
 
     private List<Map<String, String>> generateSearchCriteria(Map<String, Object> formData) {
         List<Map<String, String>> options = new ArrayList<>();

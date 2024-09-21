@@ -19,10 +19,10 @@ public class TenderInvitationController {
         return ResponseEntity.ok("hello");
     }
 
-    @GetMapping("/getOffers")
-    public ResponseEntity<OfferResponse> getOffers(){
-        return ResponseEntity.ok(tenderInvitationService.getOffers());
-    }
+//    @GetMapping("/getOffers")
+//    public ResponseEntity<OfferResponse> getOffers(){
+//        return ResponseEntity.ok(tenderInvitationService.getOffers());
+//    }
 
 
 
