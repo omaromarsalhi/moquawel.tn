@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Map;
 
-@FeignClient(name = "searchClient", url = "${search-service.url}")
-public interface SearchClient {
+@FeignClient(name = "retrieveClient", url = "${search-service.url}")
+public interface RetrieveClient {
     @PostMapping
-    ResponseEntity<OfferResponse> searchOffers(@RequestBody Map<String, Object> payload);
+    ResponseEntity<OfferResponse> retrieveClient(@RequestBody Map<String, Object> payload);
 }

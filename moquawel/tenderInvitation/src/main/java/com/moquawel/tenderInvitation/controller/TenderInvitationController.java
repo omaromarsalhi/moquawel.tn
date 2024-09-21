@@ -3,7 +3,6 @@ package com.moquawel.tenderInvitation.controller;
 
 import com.moquawel.tenderInvitation.response.OfferResponse;
 import com.moquawel.tenderInvitation.service.TenderInvitationService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

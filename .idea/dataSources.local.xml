@@ -23,6 +23,7 @@
         <introspection-scope>
           <node kind="schema">
             <name qname="@" />
+            <name qname="offers" />
             <name qname="users" />
           </node>
         </introspection-scope>

@@ -1,10 +1,11 @@
 package com.moquawel.tenderInvitation.response;
 
-import java.util.List;
-import java.util.Map;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 
+@Builder
 public record OfferResponse(
     int code,
-    Map<String,Object> payload
+    PayloadResponse payload
 ) {
 }
