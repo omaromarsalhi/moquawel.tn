@@ -127,8 +127,7 @@ public class TenderInvitationService {
 
     private String formatNowDate() {
         LocalDate date = LocalDate.now();
-//        LocalDateTime dateTime = date.atTime(LocalDateTime.now().getHour(), 0, 0);
-        LocalDateTime dateTime = date.atTime(10, 0, 0);
+        LocalDateTime dateTime = date.atTime(LocalDateTime.now().getHour(), 0, 0);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return dateTime.format(formatter);
     }
