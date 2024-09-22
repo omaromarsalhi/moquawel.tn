@@ -76,8 +76,8 @@ public class TenderInvitationService {
                             data.setBidModSeq(null);
                         })
                         .toList();
-
-                offerRepository.saveAll(newOfferList);
+                if (!newOfferList.isEmpty())
+                    offerRepository.saveAll(newOfferList);
             }
         } else
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
