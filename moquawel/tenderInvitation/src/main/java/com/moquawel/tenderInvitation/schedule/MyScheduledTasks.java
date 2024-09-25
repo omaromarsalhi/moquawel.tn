@@ -15,24 +15,24 @@ public class MyScheduledTasks {
     private final TenderInvitationService tenderInvitationService;
     private final OfferService offerService;
 
-    @Scheduled(cron = "0 0 8-20 * * 1-6")
-//    @Scheduled(cron = "0/5 * * * * * ")
-    public void tenderInvitationTask() {
-        try {
-            tenderInvitationService.getOffersFromTuneps();
-        }catch (Exception e) {
-            log.error("this err occurred while loading the offers from tuneps: {}", e.getMessage());
-        }
-    }
-
-    @Scheduled(cron = "0 59 23 * * ?")
-//    @Scheduled(cron = "0/5 * * * * ?")
-    public void dbCleaningTask() {
-        try {
-            offerService.removeExpiredOffers();
-        }catch (Exception e) {
-            log.error("this err occurred while deleting expired offers: {}",e.getMessage());
-        }
-    }
+//    @Scheduled(cron = "0 0 8-20 * * 1-6")
+////    @Scheduled(cron = "0/5 * * * * * ")
+//    public void tenderInvitationTask() {
+//        try {
+//            tenderInvitationService.getOffersFromTuneps();
+//        }catch (Exception e) {
+//            log.error("this err occurred while loading the offers from tuneps: {}", e.getMessage());
+//        }
+//    }
+//
+//    @Scheduled(cron = "0 59 23 * * ?")
+////    @Scheduled(cron = "0/5 * * * * ?")
+//    public void dbCleaningTask() {
+//        try {
+//            offerService.removeExpiredOffers();
+//        }catch (Exception e) {
+//            log.error("this err occurred while deleting expired offers: {}",e.getMessage());
+//        }
+//    }
 
 }

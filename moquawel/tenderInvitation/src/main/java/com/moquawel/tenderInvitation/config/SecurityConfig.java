@@ -19,7 +19,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 public class SecurityConfig {
 
-    private static final String[] WHITE_LIST_URL = {};
+    private static final String[] WHITE_LIST_URL = {"/api/v1/tenderInvitations/**"};
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean

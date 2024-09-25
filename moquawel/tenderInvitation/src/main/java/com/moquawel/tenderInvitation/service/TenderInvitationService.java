@@ -1,7 +1,7 @@
 package com.moquawel.tenderInvitation.service;
 
 import com.moquawel.tenderInvitation.dto.CriteriaSearch;
-import com.moquawel.tenderInvitation.feignclient.RetrieveClient;
+import com.moquawel.tenderInvitation.feignclient.*;
 import com.moquawel.tenderInvitation.offer.Offer;
 import com.moquawel.tenderInvitation.offer.OfferRepository;
 import com.moquawel.tenderInvitation.response.PayloadResponse;
@@ -28,7 +28,59 @@ public class TenderInvitationService {
     @Value("${search-service.pbkStrId}")
     private int pbkStrId;
     private final RetrieveClient retrieveClient;
+    private final AoAndGeneralInfoClient aoAndGeneralInfoClient;
+    private final LotAndArticleInfo lotAndArticleInfo;
+    private final ProdInfo prodInfo;
+    private final AgrementInfo agrementInfo;
+    private final TermsOfReferenceInfo termsOfReferenceInfo;
     private final OfferRepository offerRepository;
+
+
+    public Object getTermsOfReferenceInfo(String epBidMasterId) {
+        try {
+            return termsOfReferenceInfo.getTermsOfReferenceInfoClient(epBidMasterId).getBody();
+        } catch (Exception e) {
+            log.error("this error occurred while retrieving the terms of reference info of an offer: {}", e.getMessage());
+            return null;
+        }
+    }
+
+    public Object getAgrementInfo(String epBidMasterId) {
+        try {
+            return agrementInfo.getAgrementInfoClient(epBidMasterId).getBody();
+        } catch (Exception e) {
+            log.error("this error occurred while retrieving the agrement info of an offer: {}", e.getMessage());
+            return null;
+        }
+    }
+
+    public Object getProdInfo(String epBidMasterId) {
+        try {
+            return prodInfo.getProdInfoClient(epBidMasterId).getBody();
+        } catch (Exception e) {
+            log.error("this error occurred while retrieving the prod info of an offer: {}", e.getMessage());
+            return null;
+        }
+    }
+
+    public Object getLotAndArticleInfo(String bidNo) {
+        try {
+            return lotAndArticleInfo.getLotAndArticleInfoClient(bidNo).getBody();
+        } catch (Exception e) {
+            log.error("this error occurred while retrieving the lot and article info of an offer: {}", e.getMessage());
+            return null;
+        }
+    }
+
+    public Object getAoAndGeneralInfo(String epBidMasterId) {
+        try {
+            return aoAndGeneralInfoClient.getAoAndGeneralInfoClient(epBidMasterId).getBody();
+        } catch (Exception e) {
+            log.error("this error occurred while retrieving the ao and general info of an offer: {}", e.getMessage());
+            return null;
+        }
+    }
+
 
     public PayloadResponse getOffers() {
         List<Offer> response;
