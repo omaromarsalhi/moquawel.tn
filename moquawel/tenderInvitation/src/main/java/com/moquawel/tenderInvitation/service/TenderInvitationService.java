@@ -18,6 +18,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.function.Supplier;
 
 
 @Service
@@ -36,47 +37,31 @@ public class TenderInvitationService {
     private final OfferRepository offerRepository;
 
 
-    public Object getTermsOfReferenceInfo(String epBidMasterId) {
-        try {
-            return termsOfReferenceInfo.getTermsOfReferenceInfoClient(epBidMasterId).getBody();
-        } catch (Exception e) {
-            log.error("this error occurred while retrieving the terms of reference info of an offer: {}", e.getMessage());
-            return null;
-        }
+    public Object getTermsOfReferenceInfo(String bidNo) {
+        return getInfo(() -> termsOfReferenceInfo.getTermsOfReferenceInfoClient(bidNo), "the terms of reference info");
     }
 
-    public Object getAgrementInfo(String epBidMasterId) {
-        try {
-            return agrementInfo.getAgrementInfoClient(epBidMasterId).getBody();
-        } catch (Exception e) {
-            log.error("this error occurred while retrieving the agrement info of an offer: {}", e.getMessage());
-            return null;
-        }
+    public Object getAgrementInfo(String bidNo) {
+        return getInfo(() -> agrementInfo.getAgrementInfoClient(bidNo), "the agreement info");
     }
 
-    public Object getProdInfo(String epBidMasterId) {
-        try {
-            return prodInfo.getProdInfoClient(epBidMasterId).getBody();
-        } catch (Exception e) {
-            log.error("this error occurred while retrieving the prod info of an offer: {}", e.getMessage());
-            return null;
-        }
+    public Object getProdInfo(String bidNo) {
+        return getInfo(() -> prodInfo.getProdInfoClient(bidNo), "the product info");
     }
 
     public Object getLotAndArticleInfo(String bidNo) {
-        try {
-            return lotAndArticleInfo.getLotAndArticleInfoClient(bidNo).getBody();
-        } catch (Exception e) {
-            log.error("this error occurred while retrieving the lot and article info of an offer: {}", e.getMessage());
-            return null;
-        }
+        return getInfo(() -> lotAndArticleInfo.getLotAndArticleInfoClient(bidNo), "the lot and article info");
     }
 
     public Object getAoAndGeneralInfo(String epBidMasterId) {
+        return getInfo(() -> aoAndGeneralInfoClient.getAoAndGeneralInfoClient(epBidMasterId), "the AO and general info");
+    }
+
+    private Object getInfo(Supplier<ResponseEntity<?>> clientCall, String logMessage) {
         try {
-            return aoAndGeneralInfoClient.getAoAndGeneralInfoClient(epBidMasterId).getBody();
+            return clientCall.get().getBody();
         } catch (Exception e) {
-            log.error("this error occurred while retrieving the ao and general info of an offer: {}", e.getMessage());
+            log.error("Error occurred while retrieving {}: {}", logMessage, e.getMessage());
             return null;
         }
     }

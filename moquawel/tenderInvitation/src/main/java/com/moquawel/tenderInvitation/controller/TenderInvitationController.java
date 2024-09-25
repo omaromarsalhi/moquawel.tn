@@ -30,24 +30,24 @@ public class TenderInvitationController {
         return ResponseEntity.ok(tenderInvitationService.getAoAndGeneralInfo(epBidMasterId));
     }
 
-    @GetMapping("/getLotAndArticleInfo/{epBidMasterId}")
+    @GetMapping("/getLotAndArticleInfo/{bidNo}")
     public ResponseEntity<Object> getLotAndArticleInfo(@PathVariable String bidNo){
         return ResponseEntity.ok(tenderInvitationService.getLotAndArticleInfo(bidNo));
     }
 
-    @GetMapping("/getProdInfo/{epBidMasterId}")
-    public ResponseEntity<Object> getProdInfo(@PathVariable String epBidMasterId){
-        return ResponseEntity.ok(tenderInvitationService.getProdInfo(epBidMasterId));
+    @GetMapping("/getProdInfo/{bidNo}")
+    public ResponseEntity<Object> getProdInfo(@PathVariable String bidNo){
+        return ResponseEntity.ok(tenderInvitationService.getProdInfo(bidNo));
     }
 
-    @GetMapping("/getAgrementInfo/{epBidMasterId}")
-    public ResponseEntity<Object> getAgrementInfo(@PathVariable String epBidMasterId){
-        return ResponseEntity.ok(tenderInvitationService.getAgrementInfo(epBidMasterId));
+    @GetMapping("/getAgrementInfo/{bidNo}")
+    public ResponseEntity<Object> getAgrementInfo(@PathVariable String bidNo){
+        return ResponseEntity.ok(tenderInvitationService.getAgrementInfo(bidNo));
     }
 
-    @GetMapping("/getTermsOfReferenceInfo/{epBidMasterId}")
-    public ResponseEntity<Object> getTermsOfReferenceInfo(@PathVariable String epBidMasterId){
-        return ResponseEntity.ok(tenderInvitationService.getTermsOfReferenceInfo(epBidMasterId));
+    @GetMapping("/getTermsOfReferenceInfo/{bidNo}")
+    public ResponseEntity<Object> getTermsOfReferenceInfo(@PathVariable String bidNo){
+        return ResponseEntity.ok(tenderInvitationService.getTermsOfReferenceInfo(bidNo));
     }
 
 

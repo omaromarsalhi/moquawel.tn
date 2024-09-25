@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="schedule the task of deleting expired offers">
-      <change afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/feignclient/AgrementInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/feignclient/AoAndGeneralInfoClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/feignclient/LotAndArticleInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/feignclient/ProdInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/feignclient/TermsOfReferenceInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/tenderInvitation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/tenderInvitation.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/config/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="retrieving the details of each offer">
       <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/controller/TenderInvitationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/controller/TenderInvitationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/feignclient/RetrieveClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/feignclient/RetrieveClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/schedule/MyScheduledTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/schedule/MyScheduledTasks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/TenderInvitationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/TenderInvitationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +254,7 @@
       <workItem from="1727080667574" duration="8000" />
       <workItem from="1727251363903" duration="7550000" />
       <workItem from="1727279487109" duration="3644000" />
-      <workItem from="1727293013720" duration="2847000" />
+      <workItem from="1727293013720" duration="3194000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -482,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727032064505</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="retrieving the details of each offer">
+      <option name="closed" value="true" />
+      <created>1727295974427</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1727295974427</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,6 +501,7 @@
     <MESSAGE value="saving only new offers" />
     <MESSAGE value="schedule the task of retrieving offers from tuneps" />
     <MESSAGE value="schedule the task of deleting expired offers" />
-    <option name="LAST_COMMIT_MESSAGE" value="schedule the task of deleting expired offers" />
+    <MESSAGE value="retrieving the details of each offer" />
+    <option name="LAST_COMMIT_MESSAGE" value="retrieving the details of each offer" />
   </component>
 </project>
