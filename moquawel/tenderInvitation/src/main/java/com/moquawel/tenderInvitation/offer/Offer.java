@@ -31,7 +31,10 @@ public class Offer {
 
     private String bidNmEn;
 
+    @Transient
     private String publicDt;
+
+    private LocalDateTime myPublicDt;
 
     private String publicYn;
 

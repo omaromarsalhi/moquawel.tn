@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="retrieving the details of each offer">
+      <change afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/request/FilterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/controller/TenderInvitationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/controller/TenderInvitationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/offer/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/offer/Offer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/OfferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/OfferService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/TenderInvitationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/TenderInvitationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +24,8 @@
         <option value="spring-beans.schema" />
         <option value="Enum" />
         <option value="Record" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -254,7 +258,8 @@
       <workItem from="1727080667574" duration="8000" />
       <workItem from="1727251363903" duration="7550000" />
       <workItem from="1727279487109" duration="3644000" />
-      <workItem from="1727293013720" duration="3194000" />
+      <workItem from="1727293013720" duration="3856000" />
+      <workItem from="1727338827137" duration="1545000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -480,7 +485,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727295974427</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="retrieving the details of each offer">
+      <option name="closed" value="true" />
+      <created>1727296339439</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1727296339439</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

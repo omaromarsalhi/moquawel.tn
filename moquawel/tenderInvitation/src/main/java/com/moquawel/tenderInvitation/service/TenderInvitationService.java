@@ -4,6 +4,7 @@ import com.moquawel.tenderInvitation.dto.CriteriaSearch;
 import com.moquawel.tenderInvitation.feignclient.*;
 import com.moquawel.tenderInvitation.offer.Offer;
 import com.moquawel.tenderInvitation.offer.OfferRepository;
+import com.moquawel.tenderInvitation.request.FilterRequest;
 import com.moquawel.tenderInvitation.response.PayloadResponse;
 import com.moquawel.tenderInvitation.response.OfferResponse;
 import lombok.RequiredArgsConstructor;
@@ -35,6 +36,7 @@ public class TenderInvitationService {
     private final AgrementInfo agrementInfo;
     private final TermsOfReferenceInfo termsOfReferenceInfo;
     private final OfferRepository offerRepository;
+    private final OfferService offerService;
 
 
     public Object getTermsOfReferenceInfo(String bidNo) {
@@ -67,11 +69,11 @@ public class TenderInvitationService {
     }
 
 
-    public PayloadResponse getOffers() {
+    public PayloadResponse getFilteredOffers(FilterRequest request) {
         List<Offer> response;
 
         try {
-            response = offerRepository.findAll();
+            response = offerService.findFilteredData(request);
         } catch (Exception e) {
             log.error("this error occurred while retrieving the offers: {}", e.getMessage());
             response = new ArrayList<>();
@@ -111,6 +113,8 @@ public class TenderInvitationService {
                         .peek(data -> {
                             data.setMyBdRecvEndDt(this.fromStringToDatetime(data.getBdRecvEndDt()));
                             data.setBidModSeq(null);
+                            data.setMyPublicDt(this.fromStringToDatetime(data.getPublicDt()));
+//                            data.setPublicDt(null);
                         })
                         .toList();
                 if (!newOfferList.isEmpty())

@@ -2,6 +2,7 @@ package com.moquawel.tenderInvitation.controller;
 
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.moquawel.tenderInvitation.request.FilterRequest;
 import com.moquawel.tenderInvitation.response.PayloadResponse;
 import com.moquawel.tenderInvitation.service.TenderInvitationService;
 import lombok.RequiredArgsConstructor;
@@ -15,14 +16,10 @@ public class TenderInvitationController {
 
     private final TenderInvitationService tenderInvitationService;
 
-    @PostMapping("/hello")
-    public ResponseEntity<String> hello(){
-        return ResponseEntity.ok("hello");
-    }
 
     @GetMapping("/getOffers")
-    public ResponseEntity<PayloadResponse> getOffers(){
-        return ResponseEntity.ok(tenderInvitationService.getOffers());
+    public ResponseEntity<PayloadResponse> getOffers(@RequestBody FilterRequest request ){
+        return ResponseEntity.ok(tenderInvitationService.getFilteredOffers(request));
     }
 
     @GetMapping("/getAoAndGeneralInfo/{epBidMasterId}")

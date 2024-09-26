@@ -15,8 +15,8 @@ public class MyScheduledTasks {
     private final TenderInvitationService tenderInvitationService;
     private final OfferService offerService;
 
-//    @Scheduled(cron = "0 0 8-20 * * 1-6")
-////    @Scheduled(cron = "0/5 * * * * * ")
+////    @Scheduled(cron = "0 0 8-20 * * 1-6")
+//    @Scheduled(cron = "0/5 * * * * * ")
 //    public void tenderInvitationTask() {
 //        try {
 //            tenderInvitationService.getOffersFromTuneps();
