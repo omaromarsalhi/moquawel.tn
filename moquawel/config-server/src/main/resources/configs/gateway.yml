@@ -17,6 +17,11 @@ spring:
           predicates:
             - Path=/api/v1/users/**
 
+        - id: authentication
+          uri: lb:http://AUTHENTICATION
+          predicates:
+            - Path=/api/v1/password/**
+
         - id: subscription
           uri: lb:http://SUBSCRIPTION
           predicates:

@@ -4,8 +4,24 @@ spring:
       uri: mongodb+srv://omar:FcybyLAxvwU6nsxT@cluster0.kp2s5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       #      uri: mongodb://localhost:27017
       database: users
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: salhiomar362@gmail.com
+    password: coktmejzvjwpkdbz
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
 server:
   port: 9001
+
+
+
+
 
 application:
   security:

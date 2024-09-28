@@ -31,6 +31,16 @@ public class GlobalExceptionHandler {
                 .body(errors);
     }
 
+
+    @ExceptionHandler(EmailSendFailedException.class)
+    public ResponseEntity<?> handleException(EmailSendFailedException exp) {
+        Map<String, String> errors = new HashMap<>();
+        errors.put("Password Email: ", exp.getMessage());
+        return ResponseEntity
+                .status(HttpStatus.IM_USED)
+                .body(errors);
+    }
+
     @ExceptionHandler(DataMismatchException.class)
     public ResponseEntity<?> handleException(DataMismatchException exp) {
         Map<String, String> errors = new HashMap<>();
