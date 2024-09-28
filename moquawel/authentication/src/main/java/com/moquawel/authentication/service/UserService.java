@@ -1,6 +1,7 @@
 package com.moquawel.authentication.service;
 
 
+import com.moquawel.authentication.exception.DataMismatchException;
 import com.moquawel.authentication.request.ChangePasswordRequest;
 import com.moquawel.authentication.user.User;
 import com.moquawel.authentication.user.UserRepository;
@@ -23,10 +24,10 @@ public class UserService {
         var user = (User) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal();
 
         if (!passwordEncoder.matches(request.currentPassword(), user.getPassword())) {
-            throw new IllegalStateException("Wrong password");
+            throw new DataMismatchException("Wrong password");
         }
         if (!request.newPassword().equals(request.confirmationPassword())) {
-            throw new IllegalStateException("Password are not the same");
+            throw new DataMismatchException("Passwords are not the same");
         }
 
         user.setPassword(passwordEncoder.encode(request.newPassword()));
