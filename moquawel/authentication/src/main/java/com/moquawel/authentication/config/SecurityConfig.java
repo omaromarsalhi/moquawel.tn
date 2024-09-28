@@ -40,6 +40,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(req ->
                         req.requestMatchers(WHITE_LIST_URL)
                                 .permitAll()
+//                                .requestMatchers("/api/v1/users/changePassword").hasAnyAuthority(Role.PARTIALLY_SUBSCRIBER.name(),Role.SUBSCRIBER.name(),Role.ADMIN.name())
                                 .anyRequest()
                                 .authenticated()
                 )

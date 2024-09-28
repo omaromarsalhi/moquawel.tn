@@ -52,7 +52,7 @@ public class AuthenticationService {
                 .lastName(request.lastName())
                 .email(request.email())
                 .password(passwordEncoder.encode(request.password()))
-                .roles(new ArrayList<>(List.of(Role.SUBSCRIBER, Role.EDITOR)))
+                .roles(new ArrayList<>(List.of(Role.PARTIALLY_SUBSCRIBER)))
                 .build();
         userRepository.save(user2save);
         var tokes = generateTokens(user2save);

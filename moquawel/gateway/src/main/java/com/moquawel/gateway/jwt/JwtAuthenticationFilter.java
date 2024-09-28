@@ -39,7 +39,6 @@ public class JwtAuthenticationFilter implements WebFilter {
 //        }
 
         if (isExcluded(path)) {
-            System.out.println(path);
             return chain.filter(exchange);
         }
 

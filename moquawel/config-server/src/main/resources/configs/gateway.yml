@@ -11,14 +11,22 @@ spring:
           uri: lb:http://AUTHENTICATION
           predicates:
             - Path=/api/v1/auth/**
+
+        - id: authentication
+          uri: lb:http://AUTHENTICATION
+          predicates:
+            - Path=/api/v1/users/**
+
         - id: subscription
           uri: lb:http://SUBSCRIPTION
           predicates:
             - Path=/api/v1/subscriptions/**
+
         - id: tenderInvitation
           uri: lb:http://TENDERINVITATION
           predicates:
             - Path=/api/v1/tenderInvitations/**
+
 
 application:
   security:

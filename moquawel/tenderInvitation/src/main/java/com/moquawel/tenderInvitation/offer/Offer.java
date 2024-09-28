@@ -48,4 +48,7 @@ public class Offer {
 
     private int epBidMasterId;
 
+    private String companyType;
+
+
 }

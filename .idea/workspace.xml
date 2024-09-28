@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="retrieving the details of each offer">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a614cbb-f494-4015-88fc-edccc2b5b785.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5a614cbb-f494-4015-88fc-edccc2b5b785.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" afterDir="false" />
+    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="finished the get filter">
+      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/request/ChangePasswordRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/tenderInvitation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/tenderInvitation.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/schedule/MyScheduledTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/schedule/MyScheduledTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/TenderInvitationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/TenderInvitationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/gateway.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/offer/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/offer/Offer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +27,9 @@
         <option value="Exception" />
         <option value="spring-beans.schema" />
         <option value="Enum" />
-        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -215,11 +218,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.TenderInvitationApplication" />
-        <item itemvalue="Spring Boot.ConfigServerApplication" />
-        <item itemvalue="Spring Boot.AuthenticationApplication" />
-        <item itemvalue="Spring Boot.DiscoveryApplication" />
         <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.AuthenticationApplication" />
+        <item itemvalue="Spring Boot.ConfigServerApplication" />
+        <item itemvalue="Spring Boot.DiscoveryApplication" />
+        <item itemvalue="Spring Boot.TenderInvitationApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +268,7 @@
       <workItem from="1727293013720" duration="3856000" />
       <workItem from="1727338827137" duration="1744000" />
       <workItem from="1727508982929" duration="2112000" />
-      <workItem from="1727511151481" duration="4126000" />
+      <workItem from="1727511151481" duration="7326000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -507,7 +510,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727340562223</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="finished the get filter">
+      <option name="closed" value="true" />
+      <created>1727517081718</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1727517081718</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,6 +540,7 @@
     <MESSAGE value="schedule the task of retrieving offers from tuneps" />
     <MESSAGE value="schedule the task of deleting expired offers" />
     <MESSAGE value="retrieving the details of each offer" />
-    <option name="LAST_COMMIT_MESSAGE" value="retrieving the details of each offer" />
+    <MESSAGE value="finished the get filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished the get filter" />
   </component>
 </project>
