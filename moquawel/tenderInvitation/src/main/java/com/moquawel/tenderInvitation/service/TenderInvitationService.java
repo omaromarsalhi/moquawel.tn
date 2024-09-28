@@ -114,7 +114,7 @@ public class TenderInvitationService {
                             data.setMyBdRecvEndDt(this.fromStringToDatetime(data.getBdRecvEndDt()));
                             data.setBidModSeq(null);
                             data.setMyPublicDt(this.fromStringToDatetime(data.getPublicDt()));
-//                            data.setPublicDt(null);
+                            data.setPublicDt(null);
                         })
                         .toList();
                 if (!newOfferList.isEmpty())
@@ -168,7 +168,9 @@ public class TenderInvitationService {
 
     private String formatNowDate() {
         LocalDate date = LocalDate.now();
+//        LocalDate date = LocalDate.of(2024,9,27);
         LocalDateTime dateTime = date.atTime(LocalDateTime.now().getHour(), 0, 0);
+//        LocalDateTime dateTime = date.atTime(11, 0, 0);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return dateTime.format(formatter);
     }

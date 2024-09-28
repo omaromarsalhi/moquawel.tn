@@ -16,9 +16,10 @@ public class MyScheduledTasks {
     private final OfferService offerService;
 
 ////    @Scheduled(cron = "0 0 8-20 * * 1-6")
-//    @Scheduled(cron = "0/5 * * * * * ")
+//    @Scheduled(cron = "0/30 * * * * * ")
 //    public void tenderInvitationTask() {
 //        try {
+//            log.info("Tender Invitation");
 //            tenderInvitationService.getOffersFromTuneps();
 //        }catch (Exception e) {
 //            log.error("this err occurred while loading the offers from tuneps: {}", e.getMessage());
