@@ -16,15 +16,15 @@ public class MyScheduledTasks {
     private final OfferService offerService;
 
 ////    @Scheduled(cron = "0 0 8-20 * * 1-6")
-    @Scheduled(cron = "0/15 * * * * * ")
-    public void tenderInvitationTask() {
-        try {
-            log.info("Tender Invitation");
-            tenderInvitationService.getOffersFromTuneps();
-        }catch (Exception e) {
-            log.error("this err occurred while loading the offers from tuneps: {}", e.getMessage());
-        }
-    }
+//    @Scheduled(cron = "0/15 * * * * * ")
+//    public void tenderInvitationTask() {
+//        try {
+//            log.info("Tender Invitation");
+//            tenderInvitationService.getOffersFromTuneps();
+//        }catch (Exception e) {
+//            log.error("this err occurred while loading the offers from tuneps: {}", e.getMessage());
+//        }
+//    }
 //
 //    @Scheduled(cron = "0 59 23 * * ?")
 ////    @Scheduled(cron = "0/5 * * * * ?")

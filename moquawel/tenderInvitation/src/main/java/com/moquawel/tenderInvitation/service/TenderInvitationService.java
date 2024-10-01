@@ -145,7 +145,7 @@ public class TenderInvitationService {
         try {
             ResponseEntity<?> categoryResponse = aoAndGeneralInfoClient.getAoAndGeneralInfoClient(String.valueOf(epBidMasterId));
             JsonNode rootNode = objectMapper.convertValue(categoryResponse.getBody(), JsonNode.class);
-            return rootNode.path("payload").path("bizKindStrFr").asText();
+            return rootNode.path("payload").path("bizKindStrFr").asText().trim();
         } catch (Exception e) {
             log.error("Failed to fetch category for id: {}: {}", epBidMasterId, e.getMessage());
             return null;

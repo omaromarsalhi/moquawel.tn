@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="adding validation to the user input">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/offer/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/offer/Offer.java" afterDir="false" />
+    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="added the category to the offers">
       <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/schedule/MyScheduledTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/schedule/MyScheduledTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/OfferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/OfferService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/TenderInvitationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/service/TenderInvitationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +271,7 @@
       <workItem from="1727685020402" duration="100000" />
       <workItem from="1727685536866" duration="24000" />
       <workItem from="1727686111030" duration="44000" />
-      <workItem from="1727777362361" duration="5016000" />
+      <workItem from="1727777362361" duration="5672000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -562,7 +561,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727778099739</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="added the category to the offers">
+      <option name="closed" value="true" />
+      <created>1727782916740</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1727782916740</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,6 +595,7 @@
     <MESSAGE value="add change password to the user service" />
     <MESSAGE value="forgot password finished" />
     <MESSAGE value="adding validation to the user input" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding validation to the user input" />
+    <MESSAGE value="added the category to the offers" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the category to the offers" />
   </component>
 </project>

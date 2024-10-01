@@ -33,6 +33,9 @@ public class OfferService {
         if (filter.publicDt() != null) {
             query.addCriteria(Criteria.where("myPublicDt").gte(filter.publicDt()));
         }
+        if (filter.category() != null) {
+            query.addCriteria(Criteria.where("category").is(filter.category()));
+        }
         return mongoTemplate.find(query, Offer.class);
     }
 }
