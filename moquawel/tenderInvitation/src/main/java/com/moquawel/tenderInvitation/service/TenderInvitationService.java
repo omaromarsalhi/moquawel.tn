@@ -1,5 +1,8 @@
 package com.moquawel.tenderInvitation.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.moquawel.tenderInvitation.dto.CriteriaSearch;
 import com.moquawel.tenderInvitation.feignclient.*;
 import com.moquawel.tenderInvitation.offer.Offer;
@@ -37,6 +40,7 @@ public class TenderInvitationService {
     private final TermsOfReferenceInfo termsOfReferenceInfo;
     private final OfferRepository offerRepository;
     private final OfferService offerService;
+    private final ObjectMapper objectMapper;
 
 
     public Object getTermsOfReferenceInfo(String bidNo) {
@@ -104,24 +108,60 @@ public class TenderInvitationService {
         ResponseEntity<OfferResponse> response = retrieveClient.retrieveClient(payload);
 
         if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
-            if (response.getBody().payload().total() != 0) {
-                var newOfferList = response.getBody()
-                        .payload()
-                        .data()
-                        .stream()
-                        .filter(data -> compareDateTime(currentDateTime, data.getPublicDt()))
-                        .peek(data -> {
-                            data.setMyBdRecvEndDt(this.fromStringToDatetime(data.getBdRecvEndDt()));
-                            data.setBidModSeq(null);
-                            data.setMyPublicDt(this.fromStringToDatetime(data.getPublicDt()));
-                            data.setPublicDt(null);
-                        })
-                        .toList();
-                if (!newOfferList.isEmpty())
-                    offerRepository.saveAll(newOfferList);
-            }
+            var newOffers = this.getOnlyNewOffers(response.getBody().payload(), currentDateTime);
+            this.addCategoryToOffers(newOffers);
+            offerRepository.saveAll(newOffers);
         } else
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+
+    private List<Offer> getOnlyNewOffers(PayloadResponse payload, String currentDateTime) {
+        return payload
+                .data()
+                .stream()
+                .filter(data -> compareDateTime(currentDateTime, data.getPublicDt()))
+                .peek(data -> {
+                    data.setMyBdRecvEndDt(this.fromStringToDatetime(data.getBdRecvEndDt()));
+                    data.setBidModSeq(null);
+                    data.setMyPublicDt(this.fromStringToDatetime(data.getPublicDt()));
+                    data.setPublicDt(null);
+                })
+                .toList();
+    }
+
+    private void addCategoryToOffers(List<Offer> offers) {
+        offers.forEach(offer -> {
+            String category = getCategoryFromResponse(offer.getEpBidMasterId());
+
+            Integer formattedBudget = getFormattedBudgetFromResponse(offer.getBidNo());
+
+            offer.setCategory(category);
+            offer.setCompanyType((formattedBudget != null && formattedBudget > 10000) ? "A" : "B");
+        });
+    }
+
+    private String getCategoryFromResponse(long epBidMasterId) {
+        try {
+            ResponseEntity<?> categoryResponse = aoAndGeneralInfoClient.getAoAndGeneralInfoClient(String.valueOf(epBidMasterId));
+            JsonNode rootNode = objectMapper.convertValue(categoryResponse.getBody(), JsonNode.class);
+            return rootNode.path("payload").path("bizKindStrFr").asText();
+        } catch (Exception e) {
+            log.error("Failed to fetch category for id: {}: {}", epBidMasterId, e.getMessage());
+            return null;
+        }
+    }
+
+    private Integer getFormattedBudgetFromResponse(String bidNo) {
+        try {
+            ResponseEntity<?> budgetResponse = lotAndArticleInfo.getLotAndArticleInfoClient(bidNo);
+            JsonNode rootNode = objectMapper.convertValue(budgetResponse.getBody(), JsonNode.class);
+            String budget = rootNode.path("payload").get(0).path("guaranteeAmountCurrF").asText();
+            return Integer.parseInt(budget.trim().split(" ")[0]);
+        } catch (Exception e) {
+            log.error("Failed to fetch category for bidNo: {}: {}", bidNo, e.getMessage());
+            return null;
+        }
     }
 
 
@@ -169,8 +209,8 @@ public class TenderInvitationService {
     private String formatNowDate() {
         LocalDate date = LocalDate.now();
 //        LocalDate date = LocalDate.of(2024,9,27);
-        LocalDateTime dateTime = date.atTime(LocalDateTime.now().getHour(), 0, 0);
-//        LocalDateTime dateTime = date.atTime(11, 0, 0);
+//        LocalDateTime dateTime = date.atTime(LocalDateTime.now().getHour(), 0, 0);
+        LocalDateTime dateTime = date.atTime(11, 0, 0);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return dateTime.format(formatter);
     }

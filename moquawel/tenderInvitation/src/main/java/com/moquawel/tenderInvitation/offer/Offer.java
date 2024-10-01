@@ -36,8 +36,6 @@ public class Offer {
 
     private LocalDateTime myPublicDt;
 
-    private String publicYn;
-
     private String bidModSeq;
 
     private String bidNo;
@@ -49,6 +47,8 @@ public class Offer {
     private int epBidMasterId;
 
     private String companyType;
+
+    private String category;
 
 
 }
