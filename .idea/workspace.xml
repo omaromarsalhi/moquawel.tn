@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="add change password to the user service">
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/AsyncConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/controller/PasswordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/exception/EmailSendFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/password/PasswordResetToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/password/PasswordResetTokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/request/ForgotPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/service/PasswordResetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" afterDir="false" />
+    <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="forgot password finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/AuthenticationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/AuthenticationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/authentication.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/authentication.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/gateway.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/gateway.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/gateway/src/main/java/com/moquawel/gateway/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/request/ForgotPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/request/ForgotPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/request/RefreshTokenRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/request/RefreshTokenRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/request/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/request/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/authentication/src/main/java/com/moquawel/authentication/user/UserDto.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +84,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/salhi/Bureau/moquawel.tn/moquawel/tenderInvitation/pom.xml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/salhi/Bureau/springClass/Foyer&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -217,11 +205,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.TenderInvitationApplication" />
       <item itemvalue="Spring Boot.AuthenticationApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.DiscoveryApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.TenderInvitationApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -278,7 +266,14 @@
       <workItem from="1727511151481" duration="9734000" />
       <workItem from="1727525976378" duration="1839000" />
       <workItem from="1727531575009" duration="4020000" />
-      <workItem from="1727536245292" duration="1929000" />
+      <workItem from="1727536245292" duration="2779000" />
+      <workItem from="1727552008870" duration="93000" />
+      <workItem from="1727612333727" duration="89000" />
+      <workItem from="1727683811587" duration="28000" />
+      <workItem from="1727685020402" duration="100000" />
+      <workItem from="1727685536866" duration="24000" />
+      <workItem from="1727686111030" duration="44000" />
+      <workItem from="1727777362361" duration="543000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -544,7 +539,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727520768504</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="forgot password finished">
+      <option name="closed" value="true" />
+      <created>1727538337820</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1727538337820</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,6 +571,7 @@
     <MESSAGE value="retrieving the details of each offer" />
     <MESSAGE value="finished the get filter" />
     <MESSAGE value="add change password to the user service" />
-    <option name="LAST_COMMIT_MESSAGE" value="add change password to the user service" />
+    <MESSAGE value="forgot password finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="forgot password finished" />
   </component>
 </project>
