@@ -6,11 +6,11 @@ import jakarta.validation.constraints.*;
 
 
 public record FilterRequest(
-        @NotNull(message = "Public date must not be null")
+
         @PastOrPresent(message = "Public date must be in the past or present")
         LocalDateTime publicDt,
 
-        @NotNull(message = "BD Receive End date must not be null")
+
         @Future(message = "BD Receive End date must be in the future")
         LocalDateTime bdRecvEndDt,
 

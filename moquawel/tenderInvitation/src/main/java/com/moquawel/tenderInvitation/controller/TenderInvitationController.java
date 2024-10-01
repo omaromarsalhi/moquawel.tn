@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.moquawel.tenderInvitation.request.FilterRequest;
 import com.moquawel.tenderInvitation.response.PayloadResponse;
 import com.moquawel.tenderInvitation.service.TenderInvitationService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +19,7 @@ public class TenderInvitationController {
 
 
     @GetMapping("/getOffers")
-    public ResponseEntity<PayloadResponse> getOffers(@RequestBody FilterRequest request ){
+    public ResponseEntity<PayloadResponse> getOffers(@RequestBody @Valid FilterRequest request ){
         return ResponseEntity.ok(tenderInvitationService.getFilteredOffers(request));
     }
 
