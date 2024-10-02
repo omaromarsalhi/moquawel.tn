@@ -8,9 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
+        <module name="marketplace" />
+        <module name="discovery" />
         <module name="subscription" />
         <module name="gateway" />
-        <module name="discovery" />
         <module name="tenderInvitation" />
         <module name="authentication" />
       </profile>
@@ -26,6 +27,7 @@
       <module name="config-server" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="marketplace" options="-parameters" />
       <module name="subscription" options="-parameters" />
       <module name="tenderInvitation" options="-parameters" />
     </option>
