@@ -1,7 +1,6 @@
 package com.moquawel.tenderInvitation.controller;
 
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.moquawel.tenderInvitation.request.FilterRequest;
 import com.moquawel.tenderInvitation.response.PayloadResponse;
 import com.moquawel.tenderInvitation.service.TenderInvitationService;
