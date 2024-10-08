@@ -19,7 +19,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 public class SecurityConfig {
 
-    private static final String[] WHITE_LIST_URL = {"/api/v1/marketplace/users/**"};
+    private static final String[] WHITE_LIST_URL = {"/api/v1/marketplace/users/**","/api/v1/marketplace/admin/**"};
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean

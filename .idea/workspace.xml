@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd0efbb-bfc1-4765-90cc-d116c5005020" name="Changes" comment="start working on the marketplace">
-      <change afterPath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/controller/UserMarketPlaceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/controller/AdminMarketPlaceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/service/MyServiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f118b686-11c0-4653-b3d9-149466fe9459.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/marketplace.yml" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/config-server/src/main/resources/configs/marketplace.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/category/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/mkservice/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/mkservice/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/controller/TenderInvitationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/tenderInvitation/src/main/java/com/moquawel/tenderInvitation/controller/TenderInvitationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/mkservice/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/mkservice/MyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/mkservice/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace/mkservice/MyServiceRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,54 +65,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Database Script.console_1.js.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AuthenticationApplication.executor": "Run",
-    "Spring Boot.AuthentificationApplication (1).executor": "Run",
-    "Spring Boot.AuthentificationApplication.executor": "Run",
-    "Spring Boot.ConfigServerApplication (1).executor": "Run",
-    "Spring Boot.ConfigServerApplication.executor": "Run",
-    "Spring Boot.DiscoveryApplication.executor": "Run",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.MarketplaceApplication.executor": "Run",
-    "Spring Boot.SubscriptionApplication.executor": "Run",
-    "Spring Boot.TenderInvitationApplication.executor": "Run",
-    "Spring Boot.UsersApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/salhi/Bureau/moquawel.tn/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Database Script.console_1.js.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AuthenticationApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthentificationApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthentificationApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ConfigServerApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DiscoveryApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MarketplaceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SubscriptionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TenderInvitationApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UsersApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/salhi/Bureau/moquawel.tn/moquawel/marketplace/marketplace/src/main/java/com/moquawel/marketplace&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql_aurora",
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora&quot;,
+      &quot;mongo&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "7f9af793-fc8e-4756-904c-167063f6e1b1",
-      "7f9af793-fc8e-4756-904c-167063f6e1b1/schema/\"users\""
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;7f9af793-fc8e-4756-904c-167063f6e1b1&quot;,
+      &quot;7f9af793-fc8e-4756-904c-167063f6e1b1/schema/\&quot;users\&quot;&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -226,9 +229,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.DiscoveryApplication" />
         <item itemvalue="Spring Boot.ConfigServerApplication" />
         <item itemvalue="Spring Boot.TenderInvitationApplication" />
-        <item itemvalue="Spring Boot.DiscoveryApplication" />
         <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.AuthenticationApplication" />
       </list>
@@ -291,6 +294,9 @@
       <workItem from="1727861280955" duration="1799000" />
       <workItem from="1727873724298" duration="3158000" />
       <workItem from="1727950660528" duration="3879000" />
+      <workItem from="1727961181948" duration="39000" />
+      <workItem from="1728291363166" duration="45000" />
+      <workItem from="1728416222313" duration="4927000" />
     </task>
     <task id="LOCAL-00001" summary="start working on the authentication system">
       <option name="closed" value="true" />
@@ -620,7 +626,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727875661376</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="start working on the marketplace">
+      <option name="closed" value="true" />
+      <created>1727961209215</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1727961209215</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

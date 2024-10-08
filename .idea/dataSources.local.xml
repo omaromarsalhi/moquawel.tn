@@ -24,6 +24,7 @@
         <introspection-scope>
           <node kind="schema">
             <name qname="@" />
+            <name qname="marketplace" />
             <name qname="offers" />
             <name qname="users" />
           </node>
