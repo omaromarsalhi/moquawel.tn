@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Map;
+import java.util.List;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,6 +23,6 @@ public class MyService {
 
     private String serviceName;
 
-    private Map<String, String> fields;
+    private List<Field> fields;
 
 }

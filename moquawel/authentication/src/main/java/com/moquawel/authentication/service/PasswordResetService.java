@@ -40,19 +40,6 @@ public class PasswordResetService {
         return "Password reset email sent!";
     }
 
-
-//    @Async
-//    public void sendResetMail(PasswordResetToken passwordResetToken) {
-//        try {
-//            emailService.sendResetPasswordEmail(passwordResetToken.getUser().getEmail(), passwordResetToken.getToken());
-//            log.info("Password reset email sent to {}", passwordResetToken.getUser().getEmail());
-//        } catch (MessagingException e) {
-//            log.error("Failed to send password reset email to {}" ,passwordResetToken.getUser().getEmail());
-//            tokenRepository.delete(passwordResetToken);
-//            throw new EmailSendFailedException("Failed to send email to " + passwordResetToken.getUser().getEmail());
-//        }
-//    }
-
     public boolean validatePasswordResetToken(String token) {
         Optional<PasswordResetToken> passwordResetToken = tokenRepository.findByToken(token);
         return passwordResetToken.isPresent() && passwordResetToken.get().getExpiryDate().after(new Date());
