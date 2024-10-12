@@ -21,6 +21,5 @@ public class Category {
 
     private String name;
 
-    @DBRef
-    private String serviceId;
+    private int numberOfServices;
 }

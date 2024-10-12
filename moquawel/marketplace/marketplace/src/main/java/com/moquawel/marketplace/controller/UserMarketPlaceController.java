@@ -1,19 +1,23 @@
 package com.moquawel.marketplace.controller;
 
 
-import jakarta.validation.Valid;
+import com.moquawel.marketplace.mkservice.MyService;
+import com.moquawel.marketplace.service.MyServiceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/marketplace/users")
 @RequiredArgsConstructor
 public class UserMarketPlaceController {
 
-    @PostMapping("/hello")
-    public String hello(){
-        System.out.println("hello");
-        return "hello";
+    private final MyServiceService myServiceService;
+
+    @GetMapping("/service/get-by-category/{categoryId}")
+    public ResponseEntity<List<MyService>> getServicesByCategory(@PathVariable String categoryId) {
+        return ResponseEntity.ok(myServiceService.getServicesByCategory(categoryId));
     }
 }

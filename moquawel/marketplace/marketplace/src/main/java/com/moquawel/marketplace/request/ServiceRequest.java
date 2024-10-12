@@ -7,7 +7,8 @@ import java.util.List;
 @Builder
 public record ServiceRequest(
         String serviceName,
-        List<Field> fields
+        List<Field> fields,
+        String categoryId
 ) {}
 
 
