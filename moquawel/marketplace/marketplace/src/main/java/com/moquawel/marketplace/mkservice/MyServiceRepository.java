@@ -10,4 +10,5 @@ public interface MyServiceRepository extends MongoRepository<MyService, String> 
 
     List<MyService> findAllByCategoryId(String name);
     void deleteMyServiceByCategoryId(String id);
+
 }

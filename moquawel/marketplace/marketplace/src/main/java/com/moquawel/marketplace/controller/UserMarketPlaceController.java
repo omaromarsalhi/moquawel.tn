@@ -20,4 +20,5 @@ public class UserMarketPlaceController {
     public ResponseEntity<List<MyService>> getServicesByCategory(@PathVariable String categoryId) {
         return ResponseEntity.ok(myServiceService.getServicesByCategory(categoryId));
     }
+
 }
